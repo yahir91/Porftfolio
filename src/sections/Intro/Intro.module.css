@@ -1,0 +1,13 @@
+.container {
+  position: relative;
+  width: auto;
+  height: 60vh;
+  /* background-color: black; */
+}
+
+.container img {
+  height: 60vh;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
