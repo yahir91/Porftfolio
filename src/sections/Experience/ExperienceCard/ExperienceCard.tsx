@@ -1,4 +1,4 @@
-import { Experience } from "../../sections/Experience/Experiences";
+import { Experience } from "../Experiences";
 import classes from "./ExperienceCard.module.css";
 
 interface Props {

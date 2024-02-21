@@ -1,0 +1,14 @@
+.header {
+  height: 6rem;
+  background-color: #4087ff;
+  color: white;
+  padding-left: 4rem;
+  display: flex;
+  align-items: center;
+}
+
+.header h2 {
+  font-size: 3rem;
+  font-weight: 500;
+  margin: 0;
+}

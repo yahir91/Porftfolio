@@ -1,11 +1,10 @@
+import SectionDivider from "../../components/SectionDivider/SectionDivider";
 import classes from "./About.module.css";
 
 const About = () => {
   return (
     <div>
-      <div className={classes.header}>
-        <h2>ABOUT</h2>
-      </div>
+      <SectionDivider title="ABOUT" />
       <div className={classes.content}>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
