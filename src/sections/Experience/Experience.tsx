@@ -10,7 +10,7 @@ const Experience = () => {
       </div>
       <div className={classes.content}>
         {EXPERIENCES.map((item) => (
-          <ExperienceCard job={item} />
+          <ExperienceCard job={item} key={item.id} />
         ))}
       </div>
     </div>

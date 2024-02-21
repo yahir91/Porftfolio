@@ -11,22 +11,20 @@
 .header {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  /* justify-content: center; */
+
   border-bottom: 1px solid rgb(150, 136, 136);
   padding: 2rem 0.5rem 2rem 1.3rem;
 }
 
 .header h1 {
   margin: 0;
-  /* text-align: center; */
-  color: #4087ff;
+  color: var(--blue);
   font-family: Avenir;
   font-weight: 400;
 }
 
 .header p {
-  color: #accbff;
+  color: var(--red);
 }
 
 .sectionsContainer {

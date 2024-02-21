@@ -8,6 +8,11 @@
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --blue: #4087ff;
+  --blue-extra-light: #accbff;
+  --red-dark: #4e2d22;
+  --red: #795548
+
 }
 
 body {
