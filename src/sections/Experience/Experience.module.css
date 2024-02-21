@@ -1,0 +1,27 @@
+.header {
+  height: 6rem;
+  background-color: #4087ff;
+  color: white;
+  padding-left: 4rem;
+  display: flex;
+  align-items: center;
+}
+
+.header h2 {
+  font-size: 3rem;
+  font-weight: 500;
+  margin: 0;
+}
+/*   
+  .content {
+    padding: 3rem;
+  }
+  
+  .content p {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    line-height: 2.88rem;
+    font-size: 1.68rem;
+  }
+   */

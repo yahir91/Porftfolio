@@ -1,4 +1,5 @@
 import About from "../About/About";
+import Experience from "../Experience/Experience";
 import Intro from "../Intro/Intro";
 import classes from "./Main.module.css";
 
@@ -7,6 +8,7 @@ const Main = () => {
     <div className={classes.container}>
       <Intro />
       <About />
+      <Experience />
     </div>
   );
 };
