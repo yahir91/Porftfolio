@@ -4,6 +4,7 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  margin: 0;
 }
 
 :root {
@@ -14,9 +15,4 @@
   --red: #795548;
   --black-light-bg: #525252;
   --black-bg: #3e3e3e;
-
-}
-
-body {
-  margin: 0;
 }

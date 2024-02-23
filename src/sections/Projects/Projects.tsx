@@ -1,6 +1,6 @@
 import SectionDivider from "../../components/SectionDivider/SectionDivider";
 import ProjectCard from "./ProjectCard/ProjectCard";
-import { PROJECTS } from "./Projects";
+import { PROJECTS } from "./ProjectsInfo";
 import classes from "./Projects.module.css";
 
 const Projects = () => {

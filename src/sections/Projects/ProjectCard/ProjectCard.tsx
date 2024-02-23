@@ -1,4 +1,4 @@
-import { Project } from "../Projects";
+import { Project } from "../ProjectsInfo";
 import classes from "./ProjectCard.module.css";
 
 interface Props {
@@ -8,8 +8,10 @@ const ProjectCard = ({ project }: Props) => {
   return (
     <div className={classes.card}>
       <img src={project.image} alt={project.image} />
-      <h1>{project.name}</h1>
-      <p>{project.about}</p>
+      <div className={classes.content}>
+        <h1>{project.name}</h1>
+        <p>{project.about}</p>
+      </div>
     </div>
   );
 };
