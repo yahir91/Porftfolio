@@ -1,4 +1,6 @@
 import About from "../About/About";
+import Contact from "../Contact/Contact";
+import Education from "../Education/Education";
 import Experience from "../Experience/Experience";
 import Intro from "../Intro/Intro";
 import Projects from "../Projects/Projects";
@@ -13,6 +15,8 @@ const Main = () => {
       <Experience />
       <Projects />
       <Skills />
+      <Education />
+      <Contact />
     </div>
   );
 };
