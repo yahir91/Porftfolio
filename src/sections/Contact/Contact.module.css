@@ -1,0 +1,20 @@
+.content {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.card img {
+  width: 2.5rem;
+}
+
+.card span {
+  color: var(--blue);
+}

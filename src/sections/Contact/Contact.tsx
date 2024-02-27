@@ -1,13 +1,14 @@
 import SectionDivider from "../../components/SectionDivider/SectionDivider";
 import { CONTACT } from "./ContactInfo";
+import classes from "./Contact.module.css";
 
 const Contact = () => {
   return (
-    <div>
+    <div className={classes.container}>
       <SectionDivider title="CONTACT" />
-      <div>
+      <div className={classes.content}>
         {CONTACT.map((item) => (
-          <div key={item.id}>
+          <div className={classes.card} key={item.id}>
             <img src={item.logo} alt={item.name} />
             <span>{item.name}</span>
           </div>
