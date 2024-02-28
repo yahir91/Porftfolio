@@ -42,10 +42,12 @@
 .content p {
   font-weight: 300;
   font-style: italic;
+  margin-bottom: 0.5rem;
 }
 
 .content h3 {
   font-weight: 400;
+  margin-top: 0.5rem;
 }
 
 .content li {
@@ -65,4 +67,74 @@
 .footer span {
   font-weight: 300;
   font-size: 0.9rem;
+}
+
+@media only screen and (min-width: 690px) and (max-width: 900px) {
+  .header img {
+    width: 7rem;
+  }
+
+  .companyName {
+    font-size: 1.7rem;
+  }
+  .position {
+    font-size: 1.1rem;
+  }
+  .content p {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 690px) {
+  .header div {
+    gap: 2rem;
+  }
+  .header img {
+    width: 6rem;
+  }
+
+  .companyName {
+    font-size: 1.3rem;
+  }
+  .position {
+    font-size: 1rem;
+  }
+  .content p {
+    font-size: 0.8rem;
+  }
+
+  .content h3 {
+    font-size: 1rem;
+  }
+
+  .content li {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .header div {
+    gap: 1rem;
+  }
+  .header img {
+    width: 6rem;
+  }
+
+  .companyName {
+    font-size: 1.1rem;
+  }
+  .position {
+    font-size: 0.8rem;
+  }
+  .content p {
+    font-size: 0.6rem;
+  }
+
+  .content h3 {
+    font-size: 0.8rem;
+  }
+
+  .content li {
+    font-size: 0.6rem;
+  }
 }
