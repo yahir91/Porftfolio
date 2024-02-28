@@ -42,6 +42,10 @@
 }
 
 @media only screen and (max-width: 690px) {
+  .container h2 {
+    font-size: 1.6rem;
+  }
+
   .skillsContainer {
     gap: 2rem;
   }
