@@ -1,4 +1,4 @@
-import { RefObject } from "react";
+import { RefObject, useEffect, useState } from "react";
 import classes from "./Navbar.module.css";
 
 type Reference = {
@@ -15,6 +15,37 @@ interface Props {
 }
 
 const Navbar = ({ reference, handleScroll }: Props) => {
+  const [heightScroll, setHeightScroll] = useState(0);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setHeightScroll(window.scrollY);
+    });
+  }, [heightScroll]);
+
+  const documentHeight = Math.max(
+    document.body.scrollHeight,
+    document.documentElement.scrollHeight,
+    document.body.offsetHeight,
+    document.documentElement.offsetHeight,
+    document.body.clientHeight,
+    document.documentElement.clientHeight
+  );
+
+  const isSection = (
+    offset: number | undefined,
+    nextOffset: number | undefined
+  ) => {
+    if (
+      offset &&
+      nextOffset &&
+      heightScroll >= offset - 250 &&
+      nextOffset - 250 >= heightScroll
+    ) {
+      return true;
+    }
+    return false;
+  };
+
   return (
     <div className={classes.container}>
       <div className={classes.header}>
@@ -24,7 +55,12 @@ const Navbar = ({ reference, handleScroll }: Props) => {
 
       <div className={classes.sectionsContainer}>
         <div
-          className={classes.section}
+          className={`${classes.section} ${
+            isSection(
+              reference.about.current?.offsetTop,
+              reference.experience.current?.offsetTop
+            ) && classes.highlighted
+          }`}
           onClick={() => {
             handleScroll(reference.about.current!);
           }}
@@ -33,7 +69,12 @@ const Navbar = ({ reference, handleScroll }: Props) => {
           <span>About</span>
         </div>
         <div
-          className={classes.section}
+          className={`${classes.section} ${
+            isSection(
+              reference.experience.current?.offsetTop,
+              reference.projects.current?.offsetTop
+            ) && classes.highlighted
+          }`}
           onClick={() => {
             handleScroll(reference.experience.current!);
           }}
@@ -42,7 +83,12 @@ const Navbar = ({ reference, handleScroll }: Props) => {
           <span>Experience</span>
         </div>
         <div
-          className={classes.section}
+          className={`${classes.section} ${
+            isSection(
+              reference.projects.current?.offsetTop,
+              reference.skills.current?.offsetTop
+            ) && classes.highlighted
+          }`}
           onClick={() => {
             handleScroll(reference.projects.current!);
           }}
@@ -51,7 +97,12 @@ const Navbar = ({ reference, handleScroll }: Props) => {
           <span>Projects</span>
         </div>
         <div
-          className={classes.section}
+          className={`${classes.section} ${
+            isSection(
+              reference.skills.current?.offsetTop,
+              reference.education.current?.offsetTop
+            ) && classes.highlighted
+          }`}
           onClick={() => {
             handleScroll(reference.skills.current!);
           }}
@@ -60,7 +111,12 @@ const Navbar = ({ reference, handleScroll }: Props) => {
           <span>Skills</span>
         </div>
         <div
-          className={classes.section}
+          className={`${classes.section} ${
+            isSection(
+              reference.education.current?.offsetTop,
+              reference.contact.current?.offsetTop
+            ) && classes.highlighted
+          }`}
           onClick={() => {
             handleScroll(reference.education.current!);
           }}
@@ -69,7 +125,10 @@ const Navbar = ({ reference, handleScroll }: Props) => {
           <span>Education</span>
         </div>
         <div
-          className={classes.section}
+          className={`${classes.section} ${
+            isSection(reference.contact.current?.offsetTop, documentHeight) &&
+            classes.highlighted
+          }`}
           onClick={() => {
             handleScroll(reference.contact.current!);
           }}

@@ -11,7 +11,6 @@
 .header {
   display: flex;
   flex-direction: column;
-
   border-bottom: 1px solid rgb(150, 136, 136);
   padding: 2rem 0.5rem 2rem 1.3rem;
 }
@@ -23,22 +22,39 @@
 }
 
 .header p {
-  color: var(--red);
+  color: white;
 }
 
 .sectionsContainer {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  padding-left: 1rem;
+}
+.section:hover::before {
+  content: "";
+  background-color: var(--blue);
+  width: 0.1rem;
+  height: 4rem;
 }
 
+.highlighted::before {
+  content: "";
+  background-color: var(--blue);
+  width: 0.1rem;
+  height: 4rem;
+}
 .section {
   display: flex;
   align-items: center;
   gap: 1rem;
+  cursor: pointer;
+  height: 4rem;
+}
+
+.section:hover {
+  background-color: var(--black-light-bg);
 }
 
 .section img {
-  width: 60px;
+  padding-left: 0.5rem;
+  width: 3.75rem;
 }
