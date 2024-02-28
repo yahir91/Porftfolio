@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://yahir-cardona.github.io/yahircardona/",
+  "homepage": "https://yahir91.github.io/yahircardona/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
