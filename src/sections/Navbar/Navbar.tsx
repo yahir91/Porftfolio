@@ -16,6 +16,8 @@ interface Props {
 
 const Navbar = ({ reference, handleScroll }: Props) => {
   const [heightScroll, setHeightScroll] = useState(0);
+  const [openMenu, setOpenMenu] = useState(false);
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
       setHeightScroll(window.scrollY);
@@ -46,99 +48,116 @@ const Navbar = ({ reference, handleScroll }: Props) => {
     return false;
   };
 
+  console.log(openMenu);
+
   return (
     <div className={classes.container}>
+      <div
+        className={classes.option}
+        onClick={() => setOpenMenu((prev) => !prev)}
+      >
+        <img src="/icons/menu.png" alt="options" />
+      </div>
+
       <div className={classes.header}>
         <h1>Yahir Cardona</h1>
         <p>Full Stack Engineer</p>
       </div>
-
-      <div className={classes.sectionsContainer}>
+      <div
+        className={`${openMenu && classes.modal}`}
+        onClick={() => setOpenMenu(false)}
+      >
         <div
-          className={`${classes.section} ${
-            isSection(
-              reference.about.current?.offsetTop,
-              reference.experience.current?.offsetTop
-            ) && classes.highlighted
+          className={`${classes.sectionsContainer} ${
+            !openMenu && classes.displayNone
           }`}
-          onClick={() => {
-            handleScroll(reference.about.current!);
-          }}
         >
-          <img src="/icons/About.png" alt="About" />
-          <span>About</span>
-        </div>
-        <div
-          className={`${classes.section} ${
-            isSection(
-              reference.experience.current?.offsetTop,
-              reference.projects.current?.offsetTop
-            ) && classes.highlighted
-          }`}
-          onClick={() => {
-            handleScroll(reference.experience.current!);
-          }}
-        >
-          <img src="/icons/Experience.png" alt="Experience" />
-          <span>Experience</span>
-        </div>
-        <div
-          className={`${classes.section} ${
-            isSection(
-              reference.projects.current?.offsetTop,
-              reference.skills.current?.offsetTop
-            ) && classes.highlighted
-          }`}
-          onClick={() => {
-            handleScroll(reference.projects.current!);
-          }}
-        >
-          <img src="/icons/Project.png" alt="Projects" />
-          <span>Projects</span>
-        </div>
-        <div
-          className={`${classes.section} ${
-            isSection(
-              reference.skills.current?.offsetTop,
-              reference.education.current?.offsetTop
-            ) && classes.highlighted
-          }`}
-          onClick={() => {
-            handleScroll(reference.skills.current!);
-          }}
-        >
-          <img src="/icons/Skill.png" alt="Skills" />
-          <span>Skills</span>
-        </div>
-        <div
-          className={`${classes.section} ${
-            isSection(
-              reference.education.current?.offsetTop,
-              reference.contact.current?.offsetTop
-            ) && classes.highlighted
-          }`}
-          onClick={() => {
-            handleScroll(reference.education.current!);
-          }}
-        >
-          <img src="/icons/Education.png" alt="Education" />
-          <span>Education</span>
-        </div>
-        <div
-          className={`${classes.section} ${
-            isSection(reference.contact.current?.offsetTop, documentHeight) &&
-            classes.highlighted
-          }`}
-          onClick={() => {
-            handleScroll(reference.contact.current!);
-          }}
-        >
-          <img src="/icons/Contact.png" alt="Contact" />
-          <span>Contact</span>
-        </div>
-        <div className={classes.section}>
-          <img src="/icons/Resume.png" alt="Resume" />
-          <span>Resume</span>
+          <div
+            className={`${classes.section} ${
+              isSection(
+                reference.about.current?.offsetTop,
+                reference.experience.current?.offsetTop
+              ) && classes.highlighted
+            }`}
+            onClick={() => {
+              handleScroll(reference.about.current!);
+            }}
+          >
+            <img src="/icons/About.png" alt="About" />
+            <span>About</span>
+          </div>
+          <div
+            className={`${classes.section} ${
+              isSection(
+                reference.experience.current?.offsetTop,
+                reference.projects.current?.offsetTop
+              ) && classes.highlighted
+            }`}
+            onClick={() => {
+              handleScroll(reference.experience.current!);
+            }}
+          >
+            <img src="/icons/Experience.png" alt="Experience" />
+            <span>Experience</span>
+          </div>
+          <div
+            className={`${classes.section} ${
+              isSection(
+                reference.projects.current?.offsetTop,
+                reference.skills.current?.offsetTop
+              ) && classes.highlighted
+            }`}
+            onClick={() => {
+              handleScroll(reference.projects.current!);
+            }}
+          >
+            <img src="/icons/Project.png" alt="Projects" />
+            <span>Projects</span>
+          </div>
+          <div
+            className={`${classes.section} ${
+              isSection(
+                reference.skills.current?.offsetTop,
+                reference.education.current?.offsetTop
+              ) && classes.highlighted
+            }`}
+            onClick={() => {
+              handleScroll(reference.skills.current!);
+            }}
+          >
+            <img src="/icons/Skill.png" alt="Skills" />
+            <span>Skills</span>
+          </div>
+          <div
+            className={`${classes.section} ${
+              isSection(
+                reference.education.current?.offsetTop,
+                reference.contact.current?.offsetTop
+              ) && classes.highlighted
+            }`}
+            onClick={() => {
+              handleScroll(reference.education.current!);
+            }}
+          >
+            <img src="/icons/Education.png" alt="Education" />
+            <span>Education</span>
+          </div>
+          <div
+            className={`${classes.section} ${
+              isSection(reference.contact.current?.offsetTop, documentHeight) &&
+              classes.highlighted
+            }`}
+            onClick={() => {
+              handleScroll(reference.contact.current!);
+            }}
+          >
+            <img src="/icons/Contact.png" alt="Contact" />
+            <span>Contact</span>
+          </div>
+          <div className={classes.section}>
+            <img src="/icons/Resume.png" alt="Resume" />
+            <span>Resume</span>
+          </div>
         </div>
       </div>
     </div>

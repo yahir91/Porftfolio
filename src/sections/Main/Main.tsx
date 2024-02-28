@@ -31,7 +31,9 @@ const Main = () => {
         reference={{ about, experience, projects, skills, education, contact }}
         handleScroll={handleScroll}
       />
-      <Intro />
+      <div>
+        <Intro />
+      </div>
       <div ref={about}>
         <About />
       </div>

@@ -7,6 +7,9 @@
   height: 100vh;
   color: white;
 }
+.option {
+  display: none;
+}
 
 .header {
   display: flex;
@@ -29,6 +32,7 @@
   display: flex;
   flex-direction: column;
 }
+
 .section:hover::before {
   content: "";
   background-color: var(--blue);
@@ -57,4 +61,122 @@
 .section img {
   padding-left: 0.5rem;
   width: 3.75rem;
+}
+
+.display {
+  display: none;
+}
+
+.option {
+  display: none;
+  position: absolute;
+  top: 1.1rem;
+  left: 1.1rem;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 900px) {
+  .modal {
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+
+  .container {
+    position: fixed;
+    background-color: var(--black-bg);
+    top: 0;
+    width: 100vw;
+    height: 5rem;
+  }
+
+  .displayNone {
+    display: none;
+    animation-name: animateSideOut;
+    animation-duration: 0.4s;
+  }
+
+  .sectionsContainer {
+    position: fixed;
+    z-index: 4;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 10rem;
+    background-color: black;
+    justify-content: space-evenly;
+    animation-name: animateSide;
+    animation-duration: 0.4s;
+  }
+
+  .header {
+    border-bottom: none;
+    justify-content: center;
+    align-items: center;
+    padding: 0.7rem;
+  }
+
+  .header h1 {
+    font-size: 1.4rem;
+  }
+
+  .header p {
+    font-size: 0.9rem;
+  }
+
+  .option {
+    display: block;
+    position: absolute;
+    top: 1.1rem;
+    left: 1.1rem;
+    cursor: pointer;
+  }
+
+  .option img {
+    width: 2.5rem;
+    padding-left: 0.1rem;
+  }
+
+  .section {
+    padding-right: 0.5rem;
+    gap: 0rem;
+  }
+
+  .section img {
+    width: 3.2rem;
+  }
+
+  .section span {
+    padding-left: 1rem;
+    font-size: 0.9rem;
+  }
+
+  @-webkit-keyframes animateSide {
+    from {
+      left: -300px;
+      opacity: 0;
+    }
+    to {
+      left: 0;
+      opacity: 1;
+    }
+  }
+
+  @keyframes animateSide {
+    from {
+      left: -300px;
+      opacity: 0;
+    }
+    to {
+      left: 0;
+      opacity: 1;
+    }
+  }
 }

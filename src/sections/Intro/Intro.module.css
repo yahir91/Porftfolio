@@ -1,8 +1,7 @@
 .container {
-  position: relative;
   width: auto;
   height: 60vh;
-  /* background-color: black; */
+  z-index: 1;
 }
 
 .container img {
