@@ -56,7 +56,7 @@ const Navbar = ({ reference, handleScroll }: Props) => {
         className={classes.option}
         onClick={() => setOpenMenu((prev) => !prev)}
       >
-        <img src="/icons/menu.png" alt="options" />
+        <img src="icons/menu.png" alt="options" />
       </div>
 
       <div className={classes.header}>
@@ -83,7 +83,7 @@ const Navbar = ({ reference, handleScroll }: Props) => {
               handleScroll(reference.about.current!);
             }}
           >
-            <img src="/icons/About.png" alt="About" />
+            <img src="icons/About.png" alt="About" />
             <span>About</span>
           </div>
           <div
@@ -97,7 +97,7 @@ const Navbar = ({ reference, handleScroll }: Props) => {
               handleScroll(reference.experience.current!);
             }}
           >
-            <img src="/icons/Experience.png" alt="Experience" />
+            <img src="icons/Experience.png" alt="Experience" />
             <span>Experience</span>
           </div>
           <div
@@ -111,7 +111,7 @@ const Navbar = ({ reference, handleScroll }: Props) => {
               handleScroll(reference.projects.current!);
             }}
           >
-            <img src="/icons/Project.png" alt="Projects" />
+            <img src="icons/Project.png" alt="Projects" />
             <span>Projects</span>
           </div>
           <div
@@ -125,7 +125,7 @@ const Navbar = ({ reference, handleScroll }: Props) => {
               handleScroll(reference.skills.current!);
             }}
           >
-            <img src="/icons/Skill.png" alt="Skills" />
+            <img src="icons/Skill.png" alt="Skills" />
             <span>Skills</span>
           </div>
           <div
@@ -139,7 +139,7 @@ const Navbar = ({ reference, handleScroll }: Props) => {
               handleScroll(reference.education.current!);
             }}
           >
-            <img src="/icons/Education.png" alt="Education" />
+            <img src="icons/Education.png" alt="Education" />
             <span>Education</span>
           </div>
           <div
@@ -151,11 +151,11 @@ const Navbar = ({ reference, handleScroll }: Props) => {
               handleScroll(reference.contact.current!);
             }}
           >
-            <img src="/icons/Contact.png" alt="Contact" />
+            <img src="icons/Contact.png" alt="Contact" />
             <span>Contact</span>
           </div>
           <div className={classes.section}>
-            <img src="/icons/Resume.png" alt="Resume" />
+            <img src="icons/Resume.png" alt="Resume" />
             <span>Resume</span>
           </div>
         </div>
