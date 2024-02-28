@@ -1,7 +1,7 @@
 export const EXPERIENCES: Experience[] = [
   {
     id: 1,
-    logo: "/logos/CodEx.png",
+    logo: "logos/CodEx.png",
     company: "Code Exitos",
     position: "Software Engineer",
     companyInformation:
@@ -21,7 +21,7 @@ export const EXPERIENCES: Experience[] = [
   },
   {
     id: 2,
-    logo: "/logos/CodEx.png",
+    logo: "logos/CodEx.png",
     company: "Code Exitos",
     position: "Software Engineer",
     companyInformation:
