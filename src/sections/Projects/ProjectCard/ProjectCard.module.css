@@ -1,6 +1,11 @@
+.link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .card {
-  height: 25rem;
-  width: 25%;
+  height: 29rem;
+  width: 20rem;
   min-width: 15rem;
   max-width: 25rem;
   background-color: var(--black-light-bg);
@@ -17,7 +22,7 @@
 }
 
 .content {
-  padding: 2rem;
+  padding: 1rem 2rem;
 }
 
 .content h1 {

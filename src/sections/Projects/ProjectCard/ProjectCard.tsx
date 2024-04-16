@@ -6,6 +6,7 @@ interface Props {
 }
 const ProjectCard = ({ project }: Props) => {
   return (
+    <a className={classes.link} href={project.link}>
     <div className={classes.card}>
       <img src={project.image} alt={project.image} />
       <div className={classes.content}>
@@ -13,6 +14,7 @@ const ProjectCard = ({ project }: Props) => {
         <p>{project.about}</p>
       </div>
     </div>
+    </a>
   );
 };
 
