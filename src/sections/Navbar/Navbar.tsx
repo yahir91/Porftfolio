@@ -48,8 +48,6 @@ const Navbar = ({ reference, handleScroll }: Props) => {
     return false;
   };
 
-  console.log(openMenu);
-
   return (
     <div className={classes.container}>
       <div

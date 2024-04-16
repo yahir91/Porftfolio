@@ -1,5 +1,10 @@
 export const CONTACT: Contact[] = [
-  { id: 1, logo: "icons/email.png", name: "yahir.cardona@gmail.com", link: "" },
+  {
+    id: 1,
+    logo: "icons/email.png",
+    name: "yahir.cardona@gmail.com",
+    link: "https://docs.google.com/document/d/1KklFeEX71Yvbeh-t6AXCqXc9KWpqbss_sFZOVD-6MpQ/edit",
+  },
   {
     id: 2,
     logo: "icons/linkedin.png",

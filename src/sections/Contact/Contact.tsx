@@ -8,7 +8,12 @@ const Contact = () => {
       <SectionDivider title="CONTACT" />
       <div className={classes.content}>
         {CONTACT.map((item) => (
-          <a className={classes.link} href={item.link}>
+          <a
+            className={classes.link}
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <div className={classes.card} key={item.id}>
               <img src={item.logo} alt={item.name} />
               <span>{item.name}</span>
