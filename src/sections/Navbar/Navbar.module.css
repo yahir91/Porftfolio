@@ -7,6 +7,10 @@
   height: 100vh;
   color: white;
 }
+
+.link {
+  text-decoration: none;
+}
 .option {
   display: none;
 }
@@ -46,12 +50,14 @@
   width: 0.1rem;
   height: 4rem;
 }
+
 .section {
   display: flex;
   align-items: center;
   gap: 1rem;
   cursor: pointer;
   height: 4rem;
+  color: white;
 }
 
 .section:hover {

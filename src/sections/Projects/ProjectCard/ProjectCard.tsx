@@ -6,14 +6,19 @@ interface Props {
 }
 const ProjectCard = ({ project }: Props) => {
   return (
-    <a className={classes.link} href={project.link}>
-    <div className={classes.card}>
-      <img src={project.image} alt={project.image} />
-      <div className={classes.content}>
-        <h1>{project.name}</h1>
-        <p>{project.about}</p>
+    <a
+      className={classes.link}
+      href={project.link}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <div className={classes.card}>
+        <img src={project.image} alt={project.image} />
+        <div className={classes.content}>
+          <h1>{project.name}</h1>
+          <p>{project.about}</p>
+        </div>
       </div>
-    </div>
     </a>
   );
 };

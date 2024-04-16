@@ -152,10 +152,17 @@ const Navbar = ({ reference, handleScroll }: Props) => {
             <img src="icons/Contact.png" alt="Contact" />
             <span>Contact</span>
           </div>
-          <div className={classes.section}>
-            <img src="icons/Resume.png" alt="Resume" />
-            <span>Resume</span>
-          </div>
+          <a
+            className={classes.link}
+            href="https://docs.google.com/document/d/1KklFeEX71Yvbeh-t6AXCqXc9KWpqbss_sFZOVD-6MpQ/edit"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className={classes.section}>
+              <img src="icons/Resume.png" alt="Resume" />
+              <span>Resume</span>
+            </div>
+          </a>
         </div>
       </div>
     </div>
