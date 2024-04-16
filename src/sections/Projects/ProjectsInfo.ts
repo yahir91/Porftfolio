@@ -1,33 +1,21 @@
 export const PROJECTS: Project[] = [
   {
     id: 1,
-    image: "projects/Simera.png",
-    name: "Simera",
-    about: "Website to connect Latin American Talent with top US compnanies",
+    image: "projects/ecommerce.png",
+    name: "Game Ecommerce",
+    about: "An ecommerce build with Next.js, Stripe and Strapi. In this website you can search for games add them to your cart to later make the payment in stripe.",
   },
   {
     id: 2,
-    image: "projects/Simera.png",
-    name: "Simera",
-    about: "Website to connect Latin American Talent with top US compnanies",
+    image: "projects/instagram.png",
+    name: "Instagram",
+    about: "This project is a instagram clone built with the new rails 7 and Turbo Rails",
   },
   {
-    id: 3,
-    image: "projects/Simera.png",
-    name: "Simera",
-    about: "Website to connect Latin American Talent with top US compnanies",
-  },
-  {
-    id: 4,
-    image: "projects/Simera.png",
-    name: "Simera",
-    about: "Website to connect Latin American Talent with top US compnanies",
-  },
-  {
-    id: 5,
-    image: "projects/Simera.png",
-    name: "Simera",
-    about: "Website to connect Latin American Talent with top US compnanies",
+    id: 2,
+    image: "projects/platform.png",
+    name: "Platform Game",
+    about: "This project is a instagram clone built with the new rails 7 and Turbo Rails",
   },
 ];
 

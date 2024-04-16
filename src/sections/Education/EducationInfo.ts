@@ -1,24 +1,12 @@
 export const EDUCATION: Education[] = [
   {
     id: 1,
-    name: "Unitec",
-    location: "San Pedro Sula",
-    title: "Civil Engineer",
+    name: "Microverse",
+    location: "Remote",
+    title: "Software Developer",
   },
   {
     id: 2,
-    name: "Unitec",
-    location: "San Pedro Sula",
-    title: "Civil Engineer",
-  },
-  {
-    id: 3,
-    name: "Unitec",
-    location: "San Pedro Sula",
-    title: "Civil Engineer",
-  },
-  {
-    id: 4,
     name: "Unitec",
     location: "San Pedro Sula",
     title: "Civil Engineer",

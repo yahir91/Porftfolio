@@ -38,7 +38,7 @@ export const SKILLS: Skills[] = [
     title: "Testing",
     skills: [
       { logo: "skillsLogos/Jest.svg", name: "Jest" },
-      { logo: "skillsLogos/Rspec.ai", name: "Rspec" },
+      { logo: "skillsLogos/Rspec.png", name: "Rspec" },
       { logo: "skillsLogos/Vitest.svg", name: "Vitest" },
     ],
   },
