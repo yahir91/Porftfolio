@@ -1,6 +1,6 @@
 .header {
   height: 6rem;
-  background-color: #4087ff;
+  background-color: var(--blue);
   color: white;
   padding-left: 4rem;
   display: flex;
