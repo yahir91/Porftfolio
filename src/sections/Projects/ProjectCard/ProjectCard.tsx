@@ -26,8 +26,8 @@ const ProjectCard = ({ project }: Props) => {
             </ul>
           </div>
           <div className={classes.links}>
-            <img src="icons/github.png" alt="github" />
-            <img src="icons/github.png" alt="github" />
+            <img className={`${classes.bg} ${classes.link}`} src="icons/github.png" alt="github" />
+            <img className={`${classes.bg} ${classes.link}`} src="icons/web.png" alt="github" />
           </div>
           <div
             onClick={() => {
@@ -48,12 +48,24 @@ const ProjectCard = ({ project }: Props) => {
             onClick={() => {
               setOpen(true);
             }}
-            className={classes.link}
+            className={`${classes.link} ${classes.projectImage}`}
             src={project.image}
             alt={project.image}
           />
           <div className={classes.content}>
-            <h1>{project.name}</h1>
+            <h1
+              onClick={() => {
+                setOpen(true);
+              }}
+              className={`${classes.projectName} ${classes.link}`}
+            >
+              {project.name}{" "}
+              <img
+                className={classes.optionIcon}
+                src="icons/Options.png"
+                alt="option"
+              />
+            </h1>
             <p>{project.about}</p>
           </div>
         </div>

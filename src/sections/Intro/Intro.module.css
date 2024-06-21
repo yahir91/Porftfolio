@@ -3,11 +3,17 @@
   height: 100vh;
   z-index: 1;
   display: flex;
-  justify-content: flex-end;
-  background-color: #F0F0F0;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.text {
+  width: 400px;
+  font-size: 40px;
+  margin-bottom: 10rem;
 }
 
 .container img {
-height: 100%;
-padding-right: 5rem;
+  height: 100%;
 }
+

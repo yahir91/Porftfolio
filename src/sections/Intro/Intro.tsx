@@ -3,7 +3,8 @@ import classes from "./Intro.module.css";
 const Intro = () => {
   return (
     <div className={classes.container}>
-      <img className={classes.image} src="wallpaper/DSC_2645.png" alt="Photo" />
+      <p className={classes.text}>Lorem Ipsum indolore Lorem Ipsum Indlore LOrem Ipsum Indlolre</p>
+      <img className={classes.image} src="images/photo.webp" alt="Photo" />
     </div>
   );
 };
