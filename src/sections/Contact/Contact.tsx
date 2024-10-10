@@ -13,6 +13,7 @@ const Contact = () => {
             href={item.link}
             target="_blank"
             rel="noopener noreferrer"
+            key={item.id}
           >
             <div className={classes.card} key={item.id}>
               <img src={item.logo} alt={item.name} />

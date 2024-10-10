@@ -5,6 +5,7 @@ type Reference = {
   about: RefObject<HTMLDivElement>;
   experience: RefObject<HTMLDivElement>;
   projects: RefObject<HTMLDivElement>;
+  story: RefObject<HTMLDivElement>;
   skills: RefObject<HTMLDivElement>;
   education: RefObject<HTMLDivElement>;
   contact: RefObject<HTMLDivElement>;
@@ -102,7 +103,7 @@ const Navbar = ({ reference, handleScroll }: Props) => {
             className={`${classes.section} ${
               isSection(
                 reference.projects.current?.offsetTop,
-                reference.skills.current?.offsetTop
+                reference.story.current?.offsetTop
               ) && classes.highlighted
             }`}
             onClick={() => {
@@ -111,6 +112,20 @@ const Navbar = ({ reference, handleScroll }: Props) => {
           >
             <img src="icons/Project.png" alt="Projects" />
             <span>Projects</span>
+          </div>
+          <div
+            className={`${classes.section} ${
+              isSection(
+                reference.story.current?.offsetTop,
+                reference.skills.current?.offsetTop
+              ) && classes.highlighted
+            }`}
+            onClick={() => {
+              handleScroll(reference.story.current!);
+            }}
+          >
+            <img src="icons/Story.png" alt="Projects" />
+            <span>Story</span>
           </div>
           <div
             className={`${classes.section} ${

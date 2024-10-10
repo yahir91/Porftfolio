@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 40%;
+  background-color: var(--black-light-bg);
+  border-radius: 0.2rem;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.7), 0 5px 20px 0 rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 2rem;
+}
+
+.container h2 {
+  font-size: 2rem;
+  color: var(--blue-text);
+}
+
+.container h3 {
+  font-size: 1.5rem;
+  margin-top: 0.6rem;
+}
+.container a {
+  all: unset;
+  text-decoration: underline;
+  margin-top: 1rem;
+  cursor: pointer;
+  color: var(--blue-text);
+}
+
+@media only screen and (min-width: 690px) and (max-width: 900px) {
+  .container h2 {
+    font-size: 1.8rem;
+  }
+
+  .container h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .container {
+    width: 80%;
+  }
+  .container h2 {
+    font-size: 1.5rem;
+  }
+
+  .container h3 {
+    font-size: 1.1rem;
+  }
+}

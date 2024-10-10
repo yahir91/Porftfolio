@@ -1,10 +1,8 @@
-import classes from "./App.module.css";
 import Main from "./sections/Main/Main";
 
 function App() {
-
   return (
-    <div className={classes.container} >
+    <div>
       <Main />
     </div>
   );

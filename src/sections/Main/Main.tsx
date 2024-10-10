@@ -8,11 +8,13 @@ import Projects from "../Projects/Projects";
 import Skills from "../Skills/Skills";
 import classes from "./Main.module.css";
 import Navbar from "../Navbar/Navbar";
+import Story from "../Stories/Story";
 
 const Main = () => {
   const about = useRef<HTMLDivElement>(null);
   const experience = useRef<HTMLDivElement>(null);
   const projects = useRef<HTMLDivElement>(null);
+  const story = useRef<HTMLDivElement>(null);
   const skills = useRef<HTMLDivElement>(null);
   const education = useRef<HTMLDivElement>(null);
   const contact = useRef<HTMLDivElement>(null);
@@ -28,7 +30,15 @@ const Main = () => {
   return (
     <div className={classes.container}>
       <Navbar
-        reference={{ about, experience, projects, skills, education, contact }}
+        reference={{
+          about,
+          experience,
+          projects,
+          story,
+          skills,
+          education,
+          contact,
+        }}
         handleScroll={handleScroll}
       />
       <div>
@@ -42,6 +52,9 @@ const Main = () => {
       </div>
       <div ref={projects}>
         <Projects />
+      </div>
+      <div ref={story}>
+        <Story />
       </div>
       <div ref={skills}>
         <Skills />
