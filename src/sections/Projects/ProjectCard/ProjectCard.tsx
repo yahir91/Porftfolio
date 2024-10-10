@@ -8,12 +8,6 @@ interface Props {
 const ProjectCard = ({ project }: Props) => {
   const [open, setOpen] = useState(false);
   return (
-    // <a
-    //   className={classes.link}
-    //   href={project.link}
-    //   target="_blank"
-    //   rel="noopener noreferrer"
-    // >
     <div className={classes.card}>
       {open ? (
         <>
@@ -26,8 +20,22 @@ const ProjectCard = ({ project }: Props) => {
             </ul>
           </div>
           <div className={classes.links}>
-            <img className={`${classes.bg} ${classes.link}`} src="icons/github.png" alt="github" />
-            <img className={`${classes.bg} ${classes.link}`} src="icons/web.png" alt="github" />
+            {project.github && (
+              <a href={project.github}>
+                <img
+                  className={`${classes.bg} ${classes.link}`}
+                  src="icons/github.png"
+                  alt="github"
+                />
+              </a>
+            )}
+            <a href={project.link}>
+              <img
+                className={`${classes.bg} ${classes.link}`}
+                src="icons/web.png"
+                alt="github"
+              />
+            </a>
           </div>
           <div
             onClick={() => {
@@ -59,7 +67,7 @@ const ProjectCard = ({ project }: Props) => {
               }}
               className={`${classes.projectName} ${classes.link}`}
             >
-              {project.name}{" "}
+              {project.name}
               <img
                 className={classes.optionIcon}
                 src="icons/Options.png"
@@ -71,7 +79,6 @@ const ProjectCard = ({ project }: Props) => {
         </div>
       )}
     </div>
-    // </a>
   );
 };
 

@@ -25,7 +25,7 @@
 }
 
 .companyName {
-  color: var(--blue);
+  color: var(--blue-text);
   font-size: 2rem;
 }
 

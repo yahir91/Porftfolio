@@ -23,7 +23,7 @@
 }
 
 .header h1 {
-  color: var(--blue);
+  color: var(--blue-text);
   font-family: Avenir;
   font-weight: 400;
 }

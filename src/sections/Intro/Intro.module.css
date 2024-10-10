@@ -8,12 +8,18 @@
 }
 
 .text {
-  width: 400px;
-  font-size: 40px;
+  width: 600px;
+  font-size: 70px;
   margin-bottom: 10rem;
+  margin-left: 5rem;
+  color: var(--blue-text);
 }
 
 .container img {
   height: 100%;
 }
 
+.span {
+  font-weight: 500;
+  color: black;
+}
