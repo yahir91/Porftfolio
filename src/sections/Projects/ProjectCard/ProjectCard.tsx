@@ -12,7 +12,7 @@ const ProjectCard = ({ project }: Props) => {
       {open ? (
         <>
           <div className={classes.accomplishments}>
-            <h2>Accomplishments</h2>
+            <h2>Technologies</h2>
             <ul>
               {project.accomplishments.map((item) => (
                 <li key={`${project.id}-${item}`}>{item}</li>
@@ -21,7 +21,11 @@ const ProjectCard = ({ project }: Props) => {
           </div>
           <div className={classes.links}>
             {project.github && (
-              <a href={project.github}>
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img
                   className={`${classes.bg} ${classes.link}`}
                   src="icons/github.png"
@@ -29,13 +33,15 @@ const ProjectCard = ({ project }: Props) => {
                 />
               </a>
             )}
-            <a href={project.link}>
-              <img
-                className={`${classes.bg} ${classes.link}`}
-                src="icons/web.png"
-                alt="github"
-              />
-            </a>
+            {project.link && (
+              <a href={project.link} target="_blank" rel="noopener noreferrer">
+                <img
+                  className={`${classes.bg} ${classes.link}`}
+                  src="icons/web.png"
+                  alt="github"
+                />
+              </a>
+            )}
           </div>
           <div
             onClick={() => {
